@@ -1,0 +1,4 @@
+# Write your MySQL query statement below
+alter table Employees add columns total_time date;
+update Employees set total_time=out_time-in_time;
+select event_day as day,emp_id,total_time from Employees group by day,emp_id
