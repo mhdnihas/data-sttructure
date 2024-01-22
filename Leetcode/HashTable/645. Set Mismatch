@@ -1,0 +1,16 @@
+class Solution(object):
+    def findErrorNums(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: List[int]
+        """
+        for i in range(1,len(nums)+1):
+            if i not in nums:
+                error=i
+        dic={}
+        for i in nums:
+            if i not in dic:
+                dic[i]=0
+            else:
+                result=[i,error]
+        return result
