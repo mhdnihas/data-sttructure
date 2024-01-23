@@ -1,0 +1,16 @@
+class Solution(object):
+    def partitionString(self, s):
+        """
+        :type s: str
+        :rtype: int
+        """
+        result=0
+        unique_store=set()
+        for i in s:
+            if i in unique_store:
+                result+=1
+                unique_store.clear()
+                unique_store.add(i)
+            else:
+                unique_store.add(i)
+        return result+1
