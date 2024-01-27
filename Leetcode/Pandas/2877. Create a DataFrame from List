@@ -1,0 +1,11 @@
+import pandas as pd
+
+def createDataframe(student_data: List[List[int]]) -> pd.DataFrame:
+    data={}
+    data['student_id']=[]
+    data['age']=[]
+    for row in student_data:
+        data['student_id'].append(row[0])
+        data['age'].append(row[1])
+    return pd.DataFrame(data)
+   
