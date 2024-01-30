@@ -1,0 +1,4 @@
+import pandas as pd
+
+def renameColumns(students: pd.DataFrame) -> pd.DataFrame:
+    return students.rename(columns={'first':'first_name','id':'student_id','last':'last_name','age':'age_in_years'})
