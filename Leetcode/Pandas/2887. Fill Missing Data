@@ -1,0 +1,10 @@
+import pandas as pd
+
+def fillMissingValues(products: pd.DataFrame) -> pd.DataFrame:
+    def fill(quantity):
+        if pd.isnull(quantity):
+            return 0
+        else:
+            return quantity
+    products['quantity']=products['quantity'].apply(fill)
+    return products
